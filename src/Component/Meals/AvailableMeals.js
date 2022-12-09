@@ -1,8 +1,7 @@
 import React from "react";
 import classes from "./AvailableMeal.module.css";
-import Card from "./UI/Card";
+import Card from "../UI/Card";
 import MealItem from "./MealItem/MealItem";
-
 const DUMMY_MEALS = [
   {
     id: "m1",
@@ -29,10 +28,10 @@ const DUMMY_MEALS = [
     price: 18.99,
   },
 ];
-
 const AvailabeMeals = () => {
   const mealsList = DUMMY_MEALS.map((meal) => (
     <MealItem
+      id={meal.id}
       key={meal.id}
       name={meal.name}
       description={meal.description}
@@ -47,5 +46,4 @@ const AvailabeMeals = () => {
     </section>
   );
 };
-
 export default AvailabeMeals;
